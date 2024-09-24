@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>둥4cut</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+		<meta name="referrer" content="origin">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="application-name" content="Webcam Toy">
+		<meta name="theme-color" content="#000">
+		<link rel="stylesheet" href="Webcam Toy_files/cut.css">
+		<link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+<canvas id="toy-bg"></canvas>
+
+		<article id="content">
+			
+			<div id="infobar-stripe" class="hot-pink"><div></div></div>
+			<section id="app" style="">
+				<div id="toy" data-version="328">
+					<div id="toy-intro">
+						<div id="toy-intro-prompt">
+							<p class="prompt request" style="display: block;">안녕? 나랑 같이 사진찍을래?</p>
+							<p class="prompt request-error">다시 시도해봐!</p>
+							<p class="prompt access" >카메라 사용을 허락해줘.</p>
+							<p class="prompt access-above"><span class="arrow rotate-270"></span>카메라 사용을 허락해줘.<span class="arrow rotate-270"></span></p>
+							<p class="prompt loading">로딩둥…</p>
+							<p class="prompt error">미안..문제가 생겼나봐..</p>
+						</div>
+
+						<!-- 둥아이콘 버튼 -->
+						<div id="toy-start">
+							<div id="button-start" class="button hot-pink" style="background-color: #ff69b400; box-shadow: none;">
+								<img src="Webcam Toy_files/img/doongicon_line.png" class="doongicon">
+							</div>
+
+							<a href="h" rel="nofollow" id="button-reload" class="button hot-pink">
+								<div class="arrow"></div>
+								<p>다시 시도해봐!</p>
+							</a>
+						</div>
+						<noscript><div id="app-no-js" class="warning">Please <a href="https://enable-javascript.com/" target="_blank">enable JavaScript</a> to use Webcam Toy.</div></noscript>
+						<footer>
+							<p id="footer-denied">웹 브라우저 설정에서 카메라 액세스를 활성화해야해..</p>
+							<p id="footer-message" style="display: block;">둥이와의 만남을 사진으로 남겨보세요!</p>
+						</footer>
+					</div>
+					<div id="toy-main">
+						<div id="toy-grid">
+							<div id="grid-view">
+								<div>
+									<div>
+										<div><div class="grid-shadow"><canvas></canvas></div><p></p></div>
+										<div><div class="grid-shadow"><canvas></canvas></div><p></p></div>
+										<div><div class="grid-shadow"><canvas></canvas></div><p></p></div>
+									</div>
+									<div>
+										<div><div class="grid-shadow"><canvas></canvas></div><p></p></div>
+										<div><div class="grid-shadow"><canvas></canvas></div><p></p></div>
+										<div><div class="grid-shadow"><canvas></canvas></div><p></p></div>
+									</div>
+									<div>
+										<div><div class="grid-shadow"><canvas></canvas></div><p></p></div>
+										<div><div class="grid-shadow"><canvas></canvas></div><p></p></div>
+										<div><div class="grid-shadow"><canvas></canvas></div><p></p></div>
+									</div>
+								</div>
+							</div>
+
+						<!-- 필터 갤러리 -->
+							<div id="grid-ui">
+								<div id="button-up" class="button hot-pink">
+									<div class="arrow rotate-180"><img src="Webcam Toy_files/img/next.png" class="filterbtb" style="max-width: 100%; height: auto;"></div>
+								</div>
+								<div id="button-down" class="button hot-pink">
+									<div class="arrow rotate-0"><img src="Webcam Toy_files/img/next.png" class="filterbtb" style="max-width: 100%; height: auto;"></div>
+								</div>
+							</div>
+						</div>
+						<!-- 촬영박스 -->
+						<div id="toy-view">
+							<canvas></canvas>
+							<p id="toy-countdown" class="countdown-center"></p>
+							<!-- 프레임 -->
+							<div id="image-frame-overlay"><img src="Webcam Toy_files/img/framefire.png" class="filterbtb" ></div>
+						</div>
+						<div id="toy-ui">
+								<!-- 촬영버튼 -->
+							<div id="settings">
+								<form>
+									<div class="popup">
+										<fieldset>
+											<div>
+												<div class="checkbox hot-pink"></div>
+												<input type="checkbox" id="setting-mirror" value="mirror">
+												<label for="setting-mirror">Mirror</label>
+											</div>
+											<div>
+												<div class="checkbox hot-pink"></div>
+												<input type="checkbox" id="setting-square" value="square">
+												<label for="setting-square">Square</label>
+											</div>
+											<div>
+												<div class="checkbox hot-pink"></div>
+												<input type="checkbox" id="setting-countdown" value="countdown">
+												<label for="setting-countdown">Countdown</label>
+											</div>
+											<div>
+												<div class="checkbox hot-pink"></div>
+												<input type="checkbox" id="setting-flash" value="flash">
+												<label for="setting-flash">Flash</label>
+											</div>
+											<div>
+												<div class="checkbox hot-pink"></div>
+												<input type="checkbox" id="setting-full-screen" value="full-screen">
+												<label for="setting-full-screen">Full Screen</label>
+											</div>
+										</fieldset>
+									</div>
+									<div class="anchor"></div>
+								</form>
+							</div>
+							<div id="button-previous" class="button hot-pink">
+								<div class="arrow rotate-180">
+									<img src="Webcam Toy_files/img/next.png" class="filterbtb" style="max-width: 100%; height: auto;">
+								</div>
+							</div>
+							
+							<!-- 중간에 필터 -->
+							<div id="button-effects" class="button hot-pink">
+								<p class="more">More effects…</p>
+								<p class="loading"><span class="text">Loading… </span><span class="pc"></span></p>
+								<p class="effect effect-quadcam">Quad Cam</p>
+							</div>
+
+					<!-- 오른쪽에 선택 버튼 필터 -->
+							<div id="button-next" class="button hot-pink">
+								<div class="arrow"><img src="Webcam Toy_files/img/next.png" class="filterbtb" style="max-width: 100%; height: auto;"></div>
+							</div>
+							<!-- 찰칵버튼 -->
+							<div id="capture">
+								<div id="button-capture" class="button hot-pink">
+									<img src="Webcam Toy_files/img/capture.png" class="doongiconcap">
+								</div>
+							</div>
+						</div>
+						<!-- 다찍은 사진 -->
+						<div id="photo">
+							<img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAAACAkQBADs=" width="800" height="600" alt="">
+							<form>
+								<fieldset>
+									<input type="text" value="" placeholder="" data-alt="Playing with Webcam Toy|Taking photos with Webcam Toy|Just took this photo with Webcam Toy" maxlength="245" class="photo-shadow">
+									<input type="hidden" value="Playing with the %s effect on Webcam Toy">
+									<input type="hidden" value="Just took this %s pic on Webcam Toy">
+									<input type="hidden" value="I &lt;3 this %s effect on Webcam Toy">
+									<input type="hidden" value="My %s photo from Webcam Toy :)">
+									<p>&nbsp;</p>
+								</fieldset>
+							</form>
+						</div>
+						<div id="toy-share-ui">
+							<div id="button-back" class="button hot-pink">
+								<p>Back</p>
+							</div>
+							<div class="button twitter share">
+								<div class="icon"></div>
+								<p class="share-login">Twitter</p>
+								<p class="share-post">Post to Twitter</p>
+								<p class="share-posting">Tweeting</p>
+								<p class="share-error">다시 시도해봐!</p>
+							</div>
+							<a href="https://twitter.com/" rel="nofollow" target="_blank" class="button twitter share-center">
+								<div class="icon"></div>
+								<p>Photo tweeted!</p>
+							</a>
+						
+							<a href="https://photos.google.com/" rel="nofollow" target="_blank" class="button google share-center">
+								<div class="icon"></div>
+								<p>저장 완료!</p>
+							</a>
+							<div class="button tumblr share">
+								<div class="icon"></div>
+								<p class="share-login">Tumblr</p>
+								<p class="share-posting">Posting</p>
+								<p class="share-error">다시 시도해봐!</p>
+							</div>
+
+
+							<!-- 저장버튼 -->
+							<a data-save="webcam-toy-photo.jpg" id="button-save" class="button hot-pink">
+								<div class=""></div><p>Save</p>
+							</a>
+							<p id="prompt-login">
+								<span style="font-size: 18px;">우왕!! 너무 잘나왔둥. 멋진 사진!</span>
+							</p>
+							<p id="prompt-twitter-logout">Log out @ from Twitter.</p>
+							<p id="prompt-google-logout">Log out from Google Photos.</p>
+							<p id="prompt-tumblr-logout">Log out from Tumblr.</p>
+							<p id="prompt-back">다시 찍을래?</p>
+							<p id="prompt-discard">다시 찍을래?</p>
+							<p id="prompt-save">이 사진은 저장해야해!!!!</p>
+							<footer>
+								<p id="prompt-disclaimer">Webcam Toy does <strong>not</strong> store any of your personal information.</p>
+								<p id="prompt-twitter-post">This photo and tweet will be posted to your @ Twitter account.</p>
+								<p id="prompt-twitter-posted">View your photo on Twitter.</p>
+								<p id="prompt-twitter-error">Sorry, Twitter is having problems. Please try again later!</p>
+								<p id="prompt-google-post">This photo will be saved to your Google Photos library.</p>
+								<p id="prompt-google-posted">View your photo on Google Photos.</p>
+								<p id="prompt-google-error">Sorry, Google Photos is having problems. Please try again later!</p>
+								<p id="prompt-tumblr-post">This photo will be posted on your Tumblr.</p>
+								<p id="prompt-tumblr-posted">View your photo on Tumblr.</p>
+								<p id="prompt-tumblr-error">Sorry, Tumblr is having problems. Please try again later!</p>
+							</footer>
+						</div>
+						<div id="camera-flash"></div>
+					</div>
+				</div>
+			</section>
+		</article>
+		<script src="./Webcam Toy_files/f.txt"></script><script src="./Webcam Toy_files/f(1).txt"></script><script src="./Webcam Toy_files/f(2).txt"></script><script src="./Webcam Toy_files/f(3).txt"></script><script src="./Webcam Toy_files/jquery.3.4.1.js"></script>
+		<script src="./Webcam Toy_files/app.328.js"></script>
+		<div id="head-links" class="notranslate">
+			<div>
+<script> (adsbygoogle=window.adsbygoogle||[]).push({}); </script>
+<script async="" src="./Webcam Toy_files/f(4).txt" crossorigin="anonymous" data-checked-head="true"></script>
+			</div>
+		</div>
+		<div id="home-ad" style="display: none;">
+			<div>
+<ins class="adsbygoogle" style="display:block;width:680px;height:280px;" data-ad-client="ca-pub-9316345695176880" data-ad-slot="3108170069" data-ad-format="auto" data-page-url="https://webcamtoy.com/" data-adsbygoogle-status="done" data-ad-status="filled"><div id="aswift_2_host" style="border: none; height: 280px; width: 680px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_2" name="aswift_2" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:680px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="680" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="./Webcam Toy_files/ads(1).html" data-google-container-id="a!3" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="COnU5eua6oYDFTteDwIdaoYD-g" data-load-complete="true"></iframe></div></ins>
+<script> (adsbygoogle=window.adsbygoogle||[]).push({}); </script>
+			</div>
+		</div>
+		<div id="photo-ad">
+			<div>
+<script> (adsbygoogle=window.adsbygoogle||[]).push({}); </script>
+			<div>
+		</div>
+	
+
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
